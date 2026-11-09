@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563EB">
+  <meta name="description" content="Kumokou Prince builds AI-powered tools and digital products that help businesses work smarter.">
+  <title>Kumokou Prince | AI &amp; Product Engineer</title>
+</head>
+<body style="margin:0; background:light-dark(#f7f8fa,#0b1224); color-scheme:light dark;"><div id="kumokou-portfolio-blueprint">
+  <style>
+    #kumokou-portfolio-blueprint {
+      --kp-ink: light-dark(#101a2b, #f4f6f9);
+      --kp-muted: light-dark(#596579, #aeb7c5);
+      --kp-paper: light-dark(#f7f8fa, #0b1224);
+      --kp-white: light-dark(#ffffff, #111f3b);
+      --kp-line: light-dark(#dce1e8, #263859);
+      --kp-night: light-dark(#111b2c, #0b1224);
+      --kp-night-soft: light-dark(#19263b, #111f3b);
+      --kp-contact: light-dark(#111b2c, #111f3b);
+      --kp-footer: light-dark(#0e1726, #0b1224);
+      --kp-primary: light-dark(#2563eb, #0b1224);
+      --kp-accent: light-dark(#a8d3ff, #a8d3ff);
+      color: var(--kp-ink);
+      color-scheme: light dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      background: var(--kp-paper);
+      border: 1px solid var(--kp-line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 55px light-dark(rgba(20, 32, 50, .12), rgba(0, 0, 0, .32));
+    }
+    #kumokou-portfolio-blueprint * { box-sizing: border-box; }
+    #kumokou-portfolio-blueprint .kp-shell { max-width: 1100px; margin: 0 auto; padding: 0 6.2%; }
+    #kumokou-portfolio-blueprint .kp-nav { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--kp-line); background: var(--kp-white); }
+    #kumokou-portfolio-blueprint .kp-brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -.03em; color: var(--kp-ink); }
+    #kumokou-portfolio-blueprint .kp-monogram { width: 29px; height: 29px; display: grid; place-items: center; border-radius: 9px; color: #101a2b; background: var(--kp-accent); font-size: 12px; font-weight: 750; }
+    #kumokou-portfolio-blueprint .kp-navlinks { display: flex; align-items: center; gap: clamp(8px, 1vw, 14px); color: var(--kp-muted); font-size: 12px; }
+    #kumokou-portfolio-blueprint .kp-navlinks a { display: inline-flex; align-items: center; color: var(--kp-ink); border: 1px solid var(--kp-line); border-radius: 999px; padding: 8px 13px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: transform .2s ease, color .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    #kumokou-portfolio-blueprint .kp-navlinks a:hover,
+    #kumokou-portfolio-blueprint .kp-navlinks a:focus-visible { transform: translateY(-3px); color: light-dark(#2563eb, #a8d3ff); border-color: light-dark(#a9c7e8, #4d6d96); box-shadow: 0 10px 22px light-dark(rgba(34, 66, 106, .08), rgba(0, 0, 0, .22)); }
+    #kumokou-portfolio-blueprint .kp-theme-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 32px; padding: 4px 8px; border: 1px solid var(--kp-line); border-radius: 999px; color: var(--kp-ink); background: var(--kp-white); font: inherit; font-size: 10px; font-weight: 600; white-space: nowrap; }
+    #kumokou-portfolio-blueprint .kp-theme-icon { width: 12px; text-align: center; font-size: 13px; }
+    #kumokou-portfolio-blueprint .kp-theme-track { width: 29px; height: 17px; display: inline-flex; align-items: center; padding: 2px; border-radius: 999px; background: light-dark(#e3e8ed, #20385b); }
+    #kumokou-portfolio-blueprint .kp-theme-thumb { width: 13px; height: 13px; display: block; border-radius: 50%; background: light-dark(#fff, #a8d3ff); box-shadow: 0 1px 2px rgba(0,0,0,.18); transition: transform .18s ease; }
+    #kumokou-portfolio-blueprint .kp-theme-toggle[aria-checked="true"] .kp-theme-thumb { transform: translateX(12px); }
+    #kumokou-portfolio-blueprint .kp-hero { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 7%; padding-top: clamp(50px, 8vw, 92px); padding-bottom: clamp(58px, 8vw, 88px); }
+    #kumokou-portfolio-blueprint .kp-availability { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 17px; padding: 8px 15px; border: 1px solid light-dark(#dce6f2, #29436c); border-radius: 999px; color: light-dark(#596579, #c4cede); background: light-dark(rgba(255,255,255,.88), #111f3b); font-size: 12px; font-weight: 500; }
+    #kumokou-portfolio-blueprint .kp-availability-dot { width: 10px; height: 10px; flex: 0 0 10px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 5px light-dark(#dcfce7, #153c32); }
+    #kumokou-portfolio-blueprint .kp-eyebrow { margin: 0 0 17px; color: var(--kp-muted); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    #kumokou-portfolio-blueprint h1 { max-width: 540px; margin: 0; color: var(--kp-ink); font-size: clamp(34px, 5vw, 56px); line-height: 1.08; letter-spacing: -.055em; font-weight: 650; }
+    #kumokou-portfolio-blueprint h1 em { color: light-dark(#2563eb, #a8d3ff); font-style: normal; }
+    #kumokou-portfolio-blueprint .kp-lede { max-width: 470px; margin: 21px 0 0; color: var(--kp-muted); font-size: 14px; line-height: 1.75; }
+    #kumokou-portfolio-blueprint .kp-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    #kumokou-portfolio-blueprint .kp-button { min-height: 39px; display: inline-flex; align-items: center; gap: 8px; padding: 0 15px; border: 1px solid transparent; border-radius: 7px; font-size: 12px; font-weight: 650; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    #kumokou-portfolio-blueprint .kp-button-primary { color: #f8fafc; background: var(--kp-primary); }
+    #kumokou-portfolio-blueprint .kp-button-secondary { color: var(--kp-ink); border: 1px solid var(--kp-line); background: var(--kp-white); }
+    #kumokou-portfolio-blueprint .kp-button:hover { transform: translateY(-3px); border-color: light-dark(#a9c7e8, #4d6d96); box-shadow: 0 10px 22px light-dark(rgba(34, 66, 106, .08), rgba(0, 0, 0, .22)); }
+    #kumokou-portfolio-blueprint .kp-role { margin-top: 28px; color: var(--kp-muted); font-size: 11px; }
+    #kumokou-portfolio-blueprint .kp-role strong { color: var(--kp-ink); font-weight: 600; }
+    #kumokou-portfolio-blueprint .kp-visual { position: relative; min-height: 300px; padding: 19px; display: flex; align-items: center; justify-content: center; border-radius: 15px; overflow: hidden; color: #f5f7fb; background: var(--kp-night); }
+    #kumokou-portfolio-blueprint .kp-visual:before { content: ""; position: absolute; inset: 0; opacity: .23; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 27px 27px; mask-image: linear-gradient(140deg, #000, transparent 85%); }
+    #kumokou-portfolio-blueprint .kp-photo-frame { position: relative; width: min(72%, 232px); aspect-ratio: 4 / 5; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed rgba(255,255,255,.42); border-radius: 13px; background: rgba(255,255,255,.045); }
+    #kumokou-portfolio-blueprint .kp-photo-avatar { position: relative; width: 94px; height: 112px; margin-bottom: 15px; }
+    #kumokou-portfolio-blueprint .kp-photo-avatar:before { content: ""; position: absolute; top: 0; left: 24px; width: 46px; height: 46px; border-radius: 50%; background: rgba(168,211,255,.55); }
+    #kumokou-portfolio-blueprint .kp-photo-avatar:after { content: ""; position: absolute; left: 2px; bottom: 0; width: 90px; height: 54px; border-radius: 48px 48px 13px 13px; background: rgba(168,211,255,.3); }
+    #kumokou-portfolio-blueprint .kp-photo-label { color: #f5f7fb; font-size: 10px; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+    #kumokou-portfolio-blueprint .kp-photo-hint { margin-top: 4px; color: #aab7c8; font-size: 9px; }
+    #kumokou-portfolio-blueprint .kp-section { padding-top: 55px; padding-bottom: 60px; border-top: 1px solid var(--kp-line); background: var(--kp-white); }
+    #kumokou-portfolio-blueprint .kp-section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 23px; }
+    #kumokou-portfolio-blueprint .kp-section h2 { margin: 0; font-size: clamp(23px, 3vw, 31px); letter-spacing: -.045em; line-height: 1.14; font-weight: 620; }
+    #kumokou-portfolio-blueprint .kp-section-note { max-width: 330px; margin: 0; padding-left: 13px; border-left: 2px solid var(--kp-accent); color: var(--kp-muted); font-size: 12px; line-height: 1.65; }
+    #kumokou-portfolio-blueprint .kp-section-note strong { color: light-dark(#476a92, #bdd8f7); font-weight: 650; }
+    #kumokou-portfolio-blueprint .kp-services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; }
+    #kumokou-portfolio-blueprint .kp-service { position: relative; padding: 17px 14px 18px; border: 1px solid var(--kp-line); border-radius: 12px; background: light-dark(#fbfcfd, #202833); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(1) { background: light-dark(#f0f6fd, #142543); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(2) { background: light-dark(#edf4fc, #152849); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(3) { background: light-dark(#f5f8fd, #162642); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(4) { background: light-dark(#eaf2fb, #172b4a); }
+    #kumokou-portfolio-blueprint .kp-service:hover { transform: translateY(-3px); border-color: light-dark(#a9c7e8, #4d6d96); box-shadow: 0 10px 22px light-dark(rgba(34, 66, 106, .08), rgba(0, 0, 0, .22)); }
+    #kumokou-portfolio-blueprint .kp-service-num { color: #6888ad; font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+    #kumokou-portfolio-blueprint .kp-service-icon { width: 34px; height: 34px; display: grid; place-items: center; margin: 12px 0 10px; border-radius: 9px; background: light-dark(#edf4fc, #20385b); font-size: 18px; }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(2) .kp-service-icon { background: light-dark(#eaf0fd, #233b62); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(3) .kp-service-icon { width: 44px; height: 44px; color: light-dark(#2563eb, #a8d3ff); background: light-dark(#e4edff, #263b5e); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(3) .kp-service-icon svg { width: 22px; height: 22px; stroke-width: 1.8; }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(4) .kp-service-icon { background: light-dark(#e6f0fc, #294368); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(1) .kp-service-icon { width: 44px; height: 44px; color: light-dark(#2563eb, #a8d3ff); background: light-dark(#e4edff, #263b5e); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(1) .kp-service-icon svg { width: 22px; height: 22px; stroke-width: 1.8; }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(2) .kp-service-icon { width: 44px; height: 44px; color: light-dark(#2563eb, #a8d3ff); background: light-dark(#e4edff, #263b5e); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(2) .kp-service-icon svg { width: 22px; height: 22px; stroke-width: 1.8; }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(4) .kp-service-icon { width: 44px; height: 44px; color: light-dark(#2563eb, #a8d3ff); background: light-dark(#e4edff, #263b5e); }
+    #kumokou-portfolio-blueprint .kp-service:nth-child(4) .kp-service-icon svg { width: 22px; height: 22px; stroke-width: 1.8; }
+    #kumokou-portfolio-blueprint .kp-service h3 { margin: 0 0 7px; font-size: 13px; line-height: 1.35; letter-spacing: -.02em; font-weight: 650; }
+    #kumokou-portfolio-blueprint .kp-service p { margin: 0; color: var(--kp-muted); font-size: 10px; line-height: 1.65; }
+    #kumokou-portfolio-blueprint .kp-process-band { background: light-dark(#eef5fc, #15274a); border-top: 1px solid light-dark(#d9e7f5, #243d64); }
+    #kumokou-portfolio-blueprint .kp-process { padding-top: 53px; padding-bottom: 56px; }
+    #kumokou-portfolio-blueprint .kp-process > .kp-eyebrow,
+    #kumokou-portfolio-blueprint .kp-process > h2 { text-align: center; }
+    #kumokou-portfolio-blueprint .kp-process-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+    #kumokou-portfolio-blueprint .kp-step { min-height: 184px; padding: 19px 15px 18px; border: 1px solid var(--kp-line); border-radius: 14px; background: var(--kp-white); }
+    #kumokou-portfolio-blueprint .kp-step-num { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: light-dark(#2563eb, #3b82f6); font-size: 12px; font-weight: 700; }
+    #kumokou-portfolio-blueprint .kp-step h3 { margin: 13px 0 6px; font-size: 13px; font-weight: 650; }
+    #kumokou-portfolio-blueprint .kp-step p { margin: 0; color: var(--kp-muted); font-size: 11px; line-height: 1.65; }
+    #kumokou-portfolio-blueprint .kp-about { display: grid; grid-template-columns: minmax(120px, .24fr) minmax(0, .76fr); gap: 5%; padding-top: 42px; padding-bottom: 44px; border-top: 1px solid var(--kp-line); background: var(--kp-paper); }
+    #kumokou-portfolio-blueprint .kp-about-photo { position: relative; min-height: 120px; aspect-ratio: 4 / 5; align-self: center; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed var(--kp-line); border-radius: 12px; background: var(--kp-white); text-align: center; box-shadow: 6px 6px 0 light-dark(#dceafa, #18325d); margin: 0 6px 6px 0; }
+    #kumokou-portfolio-blueprint .kp-about-photo-stamp { position: absolute; top: 11px; left: 11px; padding: 5px 8px; border-radius: 5px; color: #f5f7fb; background: var(--kp-night); font-size: 8px; font-weight: 700; letter-spacing: .1em; }
+    #kumokou-portfolio-blueprint .kp-about-photo-mark { position: relative; width: 39px; height: 30px; margin-bottom: 10px; border: 1px solid #7e9fc5; border-radius: 6px; overflow: hidden; }
+    #kumokou-portfolio-blueprint .kp-about-photo-mark:before { content: ""; position: absolute; top: 5px; right: 6px; width: 6px; height: 6px; border-radius: 50%; background: #7e9fc5; }
+    #kumokou-portfolio-blueprint .kp-about-photo-mark:after { content: ""; position: absolute; left: 4px; bottom: -6px; width: 30px; height: 20px; transform: rotate(35deg); border: 1px solid #7e9fc5; border-radius: 4px; }
+    #kumokou-portfolio-blueprint .kp-about-photo-label { color: var(--kp-ink); font-size: 10px; font-weight: 650; }
+    #kumokou-portfolio-blueprint .kp-about-photo-hint { margin-top: 3px; color: var(--kp-muted); font-size: 9px; }
+    #kumokou-portfolio-blueprint .kp-about h2 { max-width: none; margin: 0 0 22px; font-size: clamp(31px, 4vw, 42px); line-height: 1.08; letter-spacing: -.045em; }
+    #kumokou-portfolio-blueprint .kp-about h2:after { content: ""; display: block; width: 46px; height: 4px; margin-top: 12px; border-radius: 999px; background: light-dark(#2563eb, #a8d3ff); }
+    #kumokou-portfolio-blueprint .kp-about-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    #kumokou-portfolio-blueprint .kp-about-block { min-height: 150px; padding: 15px 12px; border: 1px solid var(--kp-line); border-radius: 12px; background: light-dark(#f0f6fd, #142543); }
+    #kumokou-portfolio-blueprint .kp-about-block:nth-child(2) { background: light-dark(#edf4fc, #152849); }
+    #kumokou-portfolio-blueprint .kp-about-block:nth-child(3) { background: light-dark(#f5f8fd, #162642); }
+    #kumokou-portfolio-blueprint .kp-about-block:nth-child(4) { background: light-dark(#eaf2fb, #172b4a); }
+    #kumokou-portfolio-blueprint .kp-about-block h3 { margin: 0 0 8px; color: light-dark(#2563eb, #a8d3ff); font-size: 14px; line-height: 1.3; font-weight: 700; }
+    #kumokou-portfolio-blueprint .kp-about-copy { margin: 0; color: var(--kp-muted); font-size: 12px; line-height: 1.6; }
+    #kumokou-portfolio-blueprint .kp-about-copy strong { color: var(--kp-ink); font-weight: 650; }
+    #kumokou-portfolio-blueprint .kp-tools-section { background: var(--kp-paper); }
+    #kumokou-portfolio-blueprint .kp-tools-section > .kp-shell > .kp-eyebrow { margin-bottom: 8px; color: light-dark(#2563eb, #a8d3ff); letter-spacing: .12em; }
+    #kumokou-portfolio-blueprint .kp-tools-section h2 { max-width: none; margin: 0; font-size: clamp(28px, 3.8vw, 39px); }
+    #kumokou-portfolio-blueprint .kp-tools-intro { margin: 10px 0 0; color: var(--kp-muted); font-size: 14px; }
+    #kumokou-portfolio-blueprint .kp-tools-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
+    #kumokou-portfolio-blueprint .kp-tool-card { min-height: 205px; padding: 22px 19px; border: 1px solid var(--kp-line); border-radius: 14px; background: var(--kp-white); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    #kumokou-portfolio-blueprint .kp-tool-card:hover { transform: translateY(-3px); border-color: light-dark(#a9c7e8, #4d6d96); box-shadow: 0 10px 22px light-dark(rgba(34, 66, 106, .08), rgba(0, 0, 0, .22)); }
+    #kumokou-portfolio-blueprint .kp-tool-card h3 { margin: 0 0 14px; font-size: 14px; font-weight: 650; line-height: 1.35; }
+    #kumokou-portfolio-blueprint .kp-tool-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    #kumokou-portfolio-blueprint .kp-tool-tag { display: inline-block; max-width: 100%; padding: 6px 11px; border: 1px solid light-dark(#dce4ef, #263859); border-radius: 999px; color: var(--kp-ink); background: light-dark(#f1f5f9, #15274a); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+    #kumokou-portfolio-blueprint .kp-contact { padding-top: 39px; padding-bottom: 37px; color: #f5f7fb; background: var(--kp-contact); }
+    #kumokou-portfolio-blueprint .kp-contact-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    #kumokou-portfolio-blueprint .kp-contact .kp-eyebrow { color: #aab7c8; margin-bottom: 9px; }
+    #kumokou-portfolio-blueprint .kp-contact h2 { margin: 0; max-width: 450px; font-size: clamp(24px, 3vw, 34px); line-height: 1.15; letter-spacing: -.04em; font-weight: 620; }
+    #kumokou-portfolio-blueprint .kp-contact-links { display: grid; gap: 9px; min-width: 220px; }
+    #kumokou-portfolio-blueprint .kp-contact-button { min-height: 41px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 13px; border: 1px solid transparent; border-radius: 7px; text-decoration: none; font-size: 10px; font-weight: 650; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    #kumokou-portfolio-blueprint .kp-contact-button-wa { color: #101a2b; background: var(--kp-accent); }
+    #kumokou-portfolio-blueprint .kp-contact-button-email { color: #f5f7fb; border: 1px solid rgba(255,255,255,.24); background: transparent; }
+    #kumokou-portfolio-blueprint .kp-contact-button:hover { transform: translateY(-3px); border-color: light-dark(#a9c7e8, #4d6d96); box-shadow: 0 10px 22px light-dark(rgba(34, 66, 106, .08), rgba(0, 0, 0, .22)); }
+    #kumokou-portfolio-blueprint .kp-button-label { display: inline-flex; align-items: center; gap: 8px; }
+    #kumokou-portfolio-blueprint .kp-whatsapp-mark { width: 29px; height: 29px; display: inline-grid; place-items: center; border-radius: 7px; color: light-dark(#16a34a, #6ee7a7); background: light-dark(#e4f4ea, #14382c); }
+    #kumokou-portfolio-blueprint .kp-whatsapp-mark svg { width: 16px; height: 16px; stroke-width: 1.8; }
+    #kumokou-portfolio-blueprint .kp-email-mark { width: 29px; height: 29px; display: inline-grid; place-items: center; border-radius: 7px; color: light-dark(#2563eb, #a8d3ff); background: light-dark(#e4edff, #263b5e); }
+    #kumokou-portfolio-blueprint .kp-email-mark svg { width: 16px; height: 16px; stroke-width: 1.8; }
+    #kumokou-portfolio-blueprint .kp-footer { position: relative; padding: 43px 0 16px; color: #d3dced; background: var(--kp-footer); }
+    #kumokou-portfolio-blueprint .kp-footer-main { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr); gap: 48px; padding-bottom: 30px; }
+    #kumokou-portfolio-blueprint .kp-footer-brand { max-width: 430px; }
+    #kumokou-portfolio-blueprint .kp-footer-mark { display: inline-block; margin-bottom: 16px; color: #f5f7fb; font-size: 25px; font-weight: 800; letter-spacing: -.07em; line-height: 1; text-decoration: none; }
+    #kumokou-portfolio-blueprint .kp-footer-mark span { color: #2563eb; }
+    #kumokou-portfolio-blueprint .kp-footer-name { margin: 0 0 5px; color: #f5f7fb; font-size: 14px; font-weight: 700; }
+    #kumokou-portfolio-blueprint .kp-footer-services { margin: 0; color: #d3dced; font-size: 12px; line-height: 1.65; }
+    #kumokou-portfolio-blueprint .kp-footer-summary { max-width: 360px; margin: 8px 0 0; color: #c4cede; font-size: 12px; line-height: 1.65; }
+    #kumokou-portfolio-blueprint .kp-footer-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; padding-top: 4px; }
+    #kumokou-portfolio-blueprint .kp-footer-heading { margin: 0 0 13px; color: #f5f7fb; font-size: 13px; font-weight: 700; }
+    #kumokou-portfolio-blueprint .kp-footer-link-list { display: grid; justify-items: start; gap: 9px; }
+    #kumokou-portfolio-blueprint .kp-footer a:not(.kp-footer-mark):not(.kp-float-button) { color: #c4cede; font-size: 12px; text-decoration: none; transition: color .15s ease; }
+    #kumokou-portfolio-blueprint .kp-footer a:not(.kp-footer-mark):not(.kp-float-button):hover { color: #a8d3ff; }
+    #kumokou-portfolio-blueprint .kp-footer-bottom { display: flex; justify-content: space-between; gap: 15px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.12); color: #c4cede; font-size: 10px; }
+    #kumokou-portfolio-blueprint .kp-floating-actions { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: grid; gap: 10px; }
+    #kumokou-portfolio-blueprint .kp-float-button { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; box-shadow: 0 4px 14px rgba(0,0,0,.18); text-decoration: none; }
+    #kumokou-portfolio-blueprint .kp-float-button svg { width: 21px; height: 21px; stroke-width: 2; }
+    #kumokou-portfolio-blueprint .kp-float-top { color: #101a2b; background: #fff; }
+    #kumokou-portfolio-blueprint .kp-float-whatsapp { color: #fff; background: #16a34a; }
+    @media (max-width: 820px) {
+      #kumokou-portfolio-blueprint .kp-about-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      #kumokou-portfolio-blueprint .kp-about-block { min-height: 138px; }
+    }
+    @media (max-width: 620px) {
+      #kumokou-portfolio-blueprint .kp-shell { padding-right: 6%; padding-left: 6%; }
+      #kumokou-portfolio-blueprint .kp-nav { min-height: 58px; }
+      #kumokou-portfolio-blueprint .kp-navlinks { max-width: calc(100% - 170px); flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+      #kumokou-portfolio-blueprint .kp-navlinks a { padding: 7px 10px; }
+      #kumokou-portfolio-blueprint .kp-theme-label { display: none; }
+      #kumokou-portfolio-blueprint .kp-hero { grid-template-columns: 1fr; gap: 32px; padding-top: 47px; padding-bottom: 48px; }
+      #kumokou-portfolio-blueprint .kp-visual { min-height: 245px; }
+      #kumokou-portfolio-blueprint .kp-section-head { display: block; }
+      #kumokou-portfolio-blueprint .kp-section-note { margin-top: 10px; }
+      #kumokou-portfolio-blueprint .kp-services { grid-template-columns: repeat(2, 1fr); }
+      #kumokou-portfolio-blueprint .kp-service { padding: 15px 12px 16px; }
+      #kumokou-portfolio-blueprint .kp-process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      #kumokou-portfolio-blueprint .kp-about { grid-template-columns: 1fr; gap: 15px; }
+      #kumokou-portfolio-blueprint .kp-about-photo { width: min(58%, 250px); }
+      #kumokou-portfolio-blueprint .kp-tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      #kumokou-portfolio-blueprint .kp-tool-card { min-height: 0; padding: 18px 14px; }
+      #kumokou-portfolio-blueprint .kp-contact-row { display: block; }
+      #kumokou-portfolio-blueprint .kp-contact-links { margin-top: 22px; }
+      #kumokou-portfolio-blueprint .kp-footer { padding-top: 34px; }
+      #kumokou-portfolio-blueprint .kp-footer-main { grid-template-columns: 1fr; gap: 27px; padding-bottom: 23px; }
+      #kumokou-portfolio-blueprint .kp-footer-columns { max-width: 390px; }
+      #kumokou-portfolio-blueprint .kp-footer-bottom { flex-direction: column; gap: 6px; }
+      #kumokou-portfolio-blueprint .kp-floating-actions { right: 12px; bottom: 12px; gap: 8px; }
+      #kumokou-portfolio-blueprint .kp-float-button { width: 42px; height: 42px; }
+    }
+    @media (max-width: 390px) {
+      #kumokou-portfolio-blueprint .kp-nav { flex-wrap: wrap; gap: 10px; padding-top: 10px; padding-bottom: 10px; }
+      #kumokou-portfolio-blueprint .kp-navlinks { width: 100%; max-width: none; justify-content: space-between; flex-wrap: wrap; gap: 6px 8px; }
+      #kumokou-portfolio-blueprint .kp-navlinks a { padding: 6px 9px; }
+      #kumokou-portfolio-blueprint .kp-process-grid { grid-template-columns: 1fr; }
+      #kumokou-portfolio-blueprint .kp-about-grid { grid-template-columns: 1fr; }
+      #kumokou-portfolio-blueprint .kp-about-block { min-height: 0; }
+      #kumokou-portfolio-blueprint .kp-tools-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <header class="kp-nav kp-shell">
+    <div class="kp-brand"><span class="kp-monogram">KP</span><span>Kumokou Prince</span></div>
+    <nav class="kp-navlinks" aria-label="Main navigation"><a href="#home">Home</a><a href="#services">Service</a><a href="#about">About Me</a><a href="#how">How I Work</a><a class="kp-nav-cta" href="#contact">Contact</a><button class="kp-theme-toggle" type="button" role="switch" aria-label="Dark mode" aria-checked="false" data-theme-toggle><span class="kp-theme-icon" aria-hidden="true">☼</span><span class="kp-theme-label" data-theme-label>Day</span><span class="kp-theme-track" aria-hidden="true"><span class="kp-theme-thumb"></span></span></button></nav>
+  </header>
+  <main>
+    <section id="home" class="kp-hero kp-shell" aria-labelledby="kp-title">
+      <div>
+        <p class="kp-availability"><span class="kp-availability-dot" aria-hidden="true"></span>Available for new projects</p>
+        <p class="kp-eyebrow">AI &amp; Product Engineer</p>
+        <h1 id="kp-title">I build AI-powered tools and digital products that help businesses <em>work smarter.</em></h1>
+        <p class="kp-lede">I help businesses turn repetitive work and product ideas into useful automations, chatbots, and modern web experiences.</p>
+        <div class="kp-actions"><a class="kp-button kp-button-primary" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer"><span class="kp-button-label"><span class="kp-whatsapp-mark" aria-hidden="true"><i data-lucide="message-circle" aria-hidden="true"></i></span>Chat on WhatsApp</span><span aria-hidden="true">↗</span></a><a class="kp-button kp-button-secondary" href="#kp-services-title">Explore services ↓</a></div>
+        <p class="kp-role"><strong>AI engineering</strong> · Full-stack development · Product engineering</p>
+      </div>
+      <div class="kp-visual">
+  <img class="kp-photo" src="prince.png" alt="Kumokou Prince">
+</div>
+    </section>
+    <section id="services" class="kp-section" aria-labelledby="kp-services-title">
+      <div class="kp-shell">
+        <div class="kp-section-head"><div><p class="kp-eyebrow">What I can help with</p><h2 id="kp-services-title">Useful technology,<br>built around your business.</h2></div><p class="kp-section-note">From focused automations to complete digital products, I build <strong>practical tools</strong> around the problem you need to solve.</p></div>
+        <div class="kp-services">
+          <article class="kp-service"><span class="kp-service-num">01 / AUTOMATE</span><div class="kp-service-icon" aria-hidden="true"><i data-lucide="sun" aria-hidden="true"></i></div><h3>AI Automation</h3><p>Connect tools and streamline repeatable tasks with AI-powered workflows.</p></article>
+          <article class="kp-service"><span class="kp-service-num">02 / ASSIST</span><div class="kp-service-icon" aria-hidden="true"><i data-lucide="message-circle-more" aria-hidden="true"></i></div><h3>Intelligent Chatbots</h3><p>Create helpful conversational experiences for customer questions and business workflows.</p></article>
+          <article class="kp-service"><span class="kp-service-num">03 / LAUNCH</span><div class="kp-service-icon" aria-hidden="true"><i data-lucide="monitor" aria-hidden="true"></i></div><h3>Modern Websites</h3><p>Build clear, responsive websites that make it easy to understand and act.</p></article>
+          <article class="kp-service"><span class="kp-service-num">04 / ENGINEER</span><div class="kp-service-icon" aria-hidden="true"><i data-lucide="box" aria-hidden="true"></i></div><h3>Product Engineering</h3><p>Turn product ideas into thoughtful, dependable web experiences.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="kp-about kp-shell" aria-labelledby="kp-about-title">
+      <div class="kp-about-photo"><span class="kp-about-photo-stamp">ABOUT ME</span><img class="kp-about-img" src="prince.png" alt="Kumokou Prince"></div>
+      <div class="kp-about-content">
+        <h2 id="kp-about-title">About Me</h2>
+        <div class="kp-about-grid">
+          <article class="kp-about-block"><h3>Who I am</h3><p class="kp-about-copy">I’m Kumokou Prince, an <strong>AI and full-stack developer</strong> focused on building automation, intelligent chatbots, websites, and digital products. I bring product thinking and engineering together to make technology useful for businesses.</p></article>
+          <article class="kp-about-block"><h3>What I do</h3><p class="kp-about-copy">I help businesses streamline work, improve customer experiences, and strengthen their online presence with automation, intelligent assistants, and software.</p></article>
+          <article class="kp-about-block"><h3>My mission</h3><p class="kp-about-copy">To make useful technology more accessible through practical, reliable, user-friendly digital solutions.</p></article>
+          <article class="kp-about-block"><h3>My approach</h3><p class="kp-about-copy">I keep learning, focus on real business problems, and choose the right technology for each solution.</p></article>
+        </div>
+      </div>
+    </section>
+    <div class="kp-process-band">
+      <section id="how" class="kp-process kp-shell" aria-labelledby="kp-process-title">
+        <p class="kp-eyebrow">A straightforward process</p><h2 id="kp-process-title">From first conversation<br>to something useful.</h2>
+        <div class="kp-process-grid">
+          <article class="kp-step"><span class="kp-step-num">1</span><h3>Discovery</h3><p>Understand the client’s business, goals, challenges, and desired outcomes.</p></article>
+          <article class="kp-step"><span class="kp-step-num">2</span><h3>Planning</h3><p>Define requirements, agree on the scope, and map the proposed solution.</p></article>
+          <article class="kp-step"><span class="kp-step-num">3</span><h3>Development</h3><p>Build the agreed solution.</p></article>
+          <article class="kp-step"><span class="kp-step-num">4</span><h3>Testing</h3><p>Check functionality, usability, responsiveness, and reliability.</p></article>
+          <article class="kp-step"><span class="kp-step-num">5</span><h3>Delivery &amp; Support</h3><p>Deliver the solution, explain how to use it, and provide support as agreed.</p></article>
+        </div>
+      </section>
+    </div>
+    <section id="tools" class="kp-section kp-tools-section" aria-labelledby="kp-tools-title">
+      <div class="kp-shell">
+        <p class="kp-eyebrow">Tools</p>
+        <h2 id="kp-tools-title">Tools and Technologies</h2>
+        <p class="kp-tools-intro">The tools I use to build and connect solutions.</p>
+        <div class="kp-tools-grid">
+          <article class="kp-tool-card"><h3>AI &amp; Automation</h3><div class="kp-tool-tags"><span class="kp-tool-tag">n8n</span><span class="kp-tool-tag">Workflow automation</span><span class="kp-tool-tag">Webhooks</span><span class="kp-tool-tag">AI API integrations</span></div></article>
+          <article class="kp-tool-card"><h3>Web Development</h3><div class="kp-tool-tags"><span class="kp-tool-tag">Next.js</span><span class="kp-tool-tag">TypeScript</span><span class="kp-tool-tag">JavaScript</span><span class="kp-tool-tag">Tailwind CSS</span></div></article>
+          <article class="kp-tool-card"><h3>Backend &amp; Data</h3><div class="kp-tool-tags"><span class="kp-tool-tag">Supabase</span><span class="kp-tool-tag">Google Sheets</span><span class="kp-tool-tag">REST APIs</span><span class="kp-tool-tag">JSON</span></div></article>
+          <article class="kp-tool-card"><h3>AI Assistants &amp; Integrations</h3><div class="kp-tool-tags"><span class="kp-tool-tag">Customer-support assistants</span><span class="kp-tool-tag">Application integrations</span><span class="kp-tool-tag">Business workflow connections</span></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="kp-contact" aria-labelledby="kp-contact-title">
+      <div class="kp-shell kp-contact-row">
+        <div><p class="kp-eyebrow">Have a problem to solve?</p><h2 id="kp-contact-title">Let’s build something useful.</h2></div>
+        <div class="kp-contact-links"><a class="kp-contact-button kp-contact-button-wa" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer"><span class="kp-button-label"><span class="kp-whatsapp-mark" aria-hidden="true"><i data-lucide="message-circle" aria-hidden="true"></i></span>Chat on WhatsApp</span><span aria-hidden="true">↗</span></a><a class="kp-contact-button kp-contact-button-email" href="mailto:YOUR_EMAIL"><span class="kp-button-label"><span class="kp-email-mark" aria-hidden="true"><i data-lucide="mail" aria-hidden="true"></i></span>Email me</span><span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="kp-footer">
+    <div class="kp-shell kp-footer-main">
+      <div class="kp-footer-brand">
+        <a class="kp-footer-mark" href="#home" aria-label="Kumokou Prince home">KP<span>.</span></a>
+        <p class="kp-footer-name">Kumokou Prince</p>
+        <p class="kp-footer-services">AI Automation · Intelligent Chatbots · Modern Websites · Product Engineering</p>
+        <p class="kp-footer-summary">I build AI-powered tools and digital products that help businesses work smarter.</p>
+      </div>
+      <div class="kp-footer-columns">
+        <div>
+          <h3 class="kp-footer-heading">Explore</h3>
+          <nav class="kp-footer-link-list" aria-label="Footer navigation">
+            <a href="#home">Home</a><a href="#services">Service</a><a href="#how">How I Work</a><a href="#about">About Me</a><a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="kp-footer-heading">Contact</h3>
+          <div class="kp-footer-link-list">
+            <a href="mailto:YOUR_EMAIL">Email</a><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="kp-shell kp-footer-bottom"><span>© 2026 Kumokou Prince. All rights reserved.</span><span>AI &amp; Product Engineer · Built with intention.</span></div>
+  </footer>
+  <div class="kp-floating-actions" role="group" aria-label="Quick actions">
+    <a class="kp-float-button kp-float-top" href="#home" aria-label="Back to top"><i data-lucide="arrow-up" aria-hidden="true"></i></a>
+    <a class="kp-float-button kp-float-whatsapp" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i data-lucide="message-circle" aria-hidden="true"></i></a>
+  </div>
+  <script>
+    (() => {
+      const root = document.getElementById("kumokou-portfolio-blueprint");
+      const toggle = root?.querySelector("[data-theme-toggle]");
+      if (!root || !toggle) return;
+
+      const openai = window.openai;
+      const savedTheme = openai?.widgetState?.privateContent?.theme;
+      let theme = savedTheme === "light" || savedTheme === "dark"
+        ? savedTheme
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+      const applyTheme = () => {
+        root.style.colorScheme = theme;
+        toggle.setAttribute("aria-checked", String(theme === "dark"));
+        const label = toggle.querySelector("[data-theme-label]");
+        const icon = toggle.querySelector(".kp-theme-icon");
+        if (label) label.textContent = theme === "dark" ? "Night" : "Day";
+        if (icon) icon.textContent = theme === "dark" ? "☾" : "☼";
+      };
+
+      applyTheme();
+      toggle.addEventListener("click", () => {
+        theme = theme === "dark" ? "light" : "dark";
+        applyTheme();
+        if (openai?.setWidgetState) {
+          openai.setWidgetState({ modelContent: null, privateContent: { theme } }).catch(() => {});
+        }
+      });
+
+      window.addEventListener("openai:set_globals", (event) => {
+        const restoredTheme = event.detail?.globals?.widgetState?.privateContent?.theme;
+        if (restoredTheme === "light" || restoredTheme === "dark") {
+          theme = restoredTheme;
+          applyTheme();
+        }
+      });
+
+    })();
+  </script>
+</div>
+<style>
+  #kumokou-portfolio-blueprint { max-width: 1280px; min-height: 100vh; margin: 0 auto; border-radius: 0; border-left: 0; border-right: 0; box-shadow: none; }
+#kumokou-portfolio-blueprint .kp-hero {
+  min-height: calc(100svh - 70px);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+#kumokou-portfolio-blueprint h1 {
+  max-width: 640px;
+  font-size: clamp(30px, min(4.2vw, 7vh), 56px);
+}
+#kumokou-portfolio-blueprint .kp-lede { font-size: clamp(13px, 1.9vh, 15px); }
+#kumokou-portfolio-blueprint .kp-shell { max-width: 1280px; }
+#kumokou-portfolio-blueprint .kp-button { text-decoration: none; }
+#kumokou-portfolio-blueprint .kp-photo {
+  position: relative;
+  height: min(420px, 55svh);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 13px;
+}
+#kumokou-portfolio-blueprint .kp-about-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+#kumokou-portfolio-blueprint .kp-about-photo-stamp { z-index: 1; }
+</style>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>if (window.lucide) window.lucide.createIcons();</script>
+</body>
+</html>
